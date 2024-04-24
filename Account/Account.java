@@ -27,4 +27,16 @@ public class Account {
         return _name;
     }
 
+    public String withDrawBalance(double amountToWithdraw){
+
+        if(amountToWithdraw < _balance){
+          _balance -= amountToWithdraw;
+          return "";
+        }
+        else{
+            return "Withdrawal exceeded account balance.";
+        }
+
+    }
+
 }
